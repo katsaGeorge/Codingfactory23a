@@ -1,0 +1,31 @@
+package gr.aueb.cf.ch4;
+
+import java.util.Scanner;
+
+/**
+ * Διαβάζει απο stdin το
+ * start-value, end-value, step
+ * και εκτυπώνει το πλήθος των επαναληψεων
+ */
+public class ForFlexApp {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int startVaLue;
+        int endValue;
+        int step;
+        int iterations = 0;
+
+        System.out.println("Please provide start, end and step values");
+        startVaLue = in.nextInt();
+        endValue = in.nextInt();
+        step = in.nextInt();
+
+        for (int i = startVaLue; i <= endValue; i = i + step){
+            iterations++;
+            System.out.print(i + " ");
+
+        }
+        System.out.println("Iterations: "+iterations);
+    }
+}
